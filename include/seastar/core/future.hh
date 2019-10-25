@@ -283,7 +283,7 @@ struct future_state_base {
     // protected instead of virtual.
 protected:
     ~future_state_base() noexcept {
-        if (failed()) {
+        if (__builtin_expect(failed(), false)) {
             report_failed_future(_u.take_exception());
         }
     }
