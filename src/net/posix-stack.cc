@@ -21,6 +21,9 @@
 
 #include <random>
 
+#include <sys/types.h>
+#include <sys/socket.h>
+
 #include <linux/if.h>
 #include <linux/netlink.h>
 #include <linux/rtnetlink.h>
