@@ -67,7 +67,7 @@ set (make_command make -j ${build_concurrency_factor})
 
 cooking_ingredient (gmp
   EXTERNAL_PROJECT_ARGS
-    URL https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
+    URL https://github.com/chimucong/seastar-cooking/raw/master/gmp-6.1.2.tar.bz2
     URL_MD5 8ddbb26dc3bd4e2302984debba1406a5
     CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> --srcdir=<SOURCE_DIR> ${info_dir}/gmp
     BUILD_COMMAND <DISABLE>
@@ -79,7 +79,7 @@ cooking_ingredient (gmp
 
 cooking_ingredient (colm
   EXTERNAL_PROJECT_ARGS
-    URL http://www.colm.net/files/colm/colm-0.13.0.6.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/colm-0.13.0.6.tar.gz
     URL_MD5 16aaf566cbcfe9a06154e094638ac709
     # This is upsetting.
     BUILD_IN_SOURCE YES
@@ -89,7 +89,7 @@ cooking_ingredient (colm
 
 cooking_ingredient (libpciaccess
   EXTERNAL_PROJECT_ARGS
-    URL https://www.x.org/releases/individual/lib/libpciaccess-0.13.4.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/libpciaccess-0.13.4.tar.gz
     URL_MD5 cc1fad87da60682af1d5fa43a5da45a4
     CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> --srcdir=<SOURCE_DIR>
     BUILD_COMMAND <DISABLE>
@@ -98,7 +98,7 @@ cooking_ingredient (libpciaccess
 cooking_ingredient (nettle
   REQUIRES gmp
   EXTERNAL_PROJECT_ARGS
-    URL https://ftp.gnu.org/gnu/nettle/nettle-3.4.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/nettle-3.4.tar.gz
     URL_MD5 dc0f13028264992f58e67b4e8915f53d
     CONFIGURE_COMMAND
       <SOURCE_DIR>/configure
@@ -121,7 +121,7 @@ cooking_ingredient (numactl
 
 cooking_ingredient (zlib
   EXTERNAL_PROJECT_ARGS
-    URL https://zlib.net/zlib-1.2.11.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/zlib-1.2.11.tar.gz
     URL_MD5 1c9f62f0778697a09d36121ead88e08e
     CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR>
     BUILD_COMMAND <DISABLE>
@@ -134,7 +134,7 @@ cooking_ingredient (zlib
 cooking_ingredient (Boost
   EXTERNAL_PROJECT_ARGS
     # The 1.67.0 release has a bug in Boost Lockfree around a missing header.
-    URL https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/boost_1_64_0.tar.gz
     URL_MD5 319c6ffbbeccc366f14bb68767a6db79
     PATCH_COMMAND
       ./bootstrap.sh
@@ -191,7 +191,7 @@ cooking_ingredient (hwloc
     numactl
     libpciaccess
   EXTERNAL_PROJECT_ARGS
-    URL https://download.open-mpi.org/release/hwloc/v1.11/hwloc-1.11.5.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/hwloc-1.11.5.tar.gz
     URL_MD5 8f5fe6a9be2eb478409ad5e640b2d3ba
     CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> --srcdir=<SOURCE_DIR>
     BUILD_COMMAND <DISABLE>
@@ -200,7 +200,7 @@ cooking_ingredient (hwloc
 cooking_ingredient (ragel
   REQUIRES colm
   EXTERNAL_PROJECT_ARGS
-    URL http://www.colm.net/files/ragel/ragel-6.10.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/ragel-6.10.tar.gz
     URL_MD5 748cae8b50cffe9efcaa5acebc6abf0d
     # This is upsetting.
     BUILD_IN_SOURCE YES
@@ -215,7 +215,7 @@ cooking_ingredient (ragel
 
 cooking_ingredient (lksctp-tools
   EXTERNAL_PROJECT_ARGS
-    URL https://sourceforge.net/projects/lksctp/files/lksctp-tools/lksctp-tools-1.0.16.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/lksctp-tools-1.0.16.tar.gz
     URL_MD5 708bb0b5a6806ad6e8d13c55b067518e
     PATCH_COMMAND ./bootstrap
     CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> --srcdir=<SOURCE_DIR>
@@ -237,7 +237,7 @@ cooking_ingredient (yaml-cpp
 
 cooking_ingredient (c-ares
   EXTERNAL_PROJECT_ARGS
-    URL https://c-ares.haxx.se/download/c-ares-1.13.0.tar.gz
+    URL https://github.com/chimucong/seastar-cooking/raw/master/c-ares-1.13.0.tar.gz
     URL_MD5 d2e010b43537794d8bedfb562ae6bba2
     CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> --srcdir=<SOURCE_DIR>
     BUILD_COMMAND <DISABLE>
