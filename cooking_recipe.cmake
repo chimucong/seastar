@@ -170,6 +170,7 @@ cooking_ingredient (GnuTLS
       --with-included-unistring
       --with-included-libtasn1
       --without-p11-kit
+      --without-libidn2
       # https://lists.gnupg.org/pipermail/gnutls-help/2016-February/004085.html
       --disable-non-suiteb-curves
       --disable-doc
