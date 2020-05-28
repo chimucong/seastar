@@ -707,7 +707,7 @@ target_link_libraries (seastar
     rt::rt
     yaml-cpp::yaml-cpp
     Threads::Threads)
-
+find_package(Sanitizers REQUIRED)
 set (Seastar_SANITIZE_MODES "Debug" "Sanitize")
 if ((Seastar_SANITIZE STREQUAL "ON") OR
     ((Seastar_SANITIZE STREQUAL "DEFAULT") AND

@@ -127,6 +127,14 @@ cooking_ingredient (zlib
     BUILD_COMMAND <DISABLE>
     INSTALL_COMMAND ${make_command} install)
 
+#cooking_ingredient (idn2
+#  EXTERNAL_PROJECT_ARGS
+#    URL https://github.com/chimucong/seastar-cooking/raw/master/libidn2-2.2.0.tar.gz
+#    URL_MD5 b846d4d20e22b99d6f7387bb66e00a1f
+#    CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR>
+#    BUILD_COMMAND <DISABLE>
+#    INSTALL_COMMAND ${make_command} install)
+
 ##
 ## Private and private/public dependencies.
 ##
@@ -170,6 +178,7 @@ cooking_ingredient (GnuTLS
       --with-included-unistring
       --with-included-libtasn1
       --without-p11-kit
+      --without-libidn2
       # https://lists.gnupg.org/pipermail/gnutls-help/2016-February/004085.html
       --disable-non-suiteb-curves
       --disable-doc
